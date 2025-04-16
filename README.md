@@ -8,7 +8,7 @@ It will deploy the artifacts at the end of the build to keep the window of failu
 
 ## Usage
 
-Inherit the camunda-release-parent pom inside your project like so  
+Inherit the flowave-release-parent pom inside your project like so  
   
     <parent>
       <groupId>org.camunda</groupId>
