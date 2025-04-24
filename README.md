@@ -1,16 +1,14 @@
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.camunda/camunda-release-parent/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.camunda/camunda-release-parent)
+[![FINOS - Forming](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-forming.svg)](https://community.finos.org/docs/governance/Software-Projects/project-lifecycle)
 
-camunda-release-parent
-======================
+# Flowave Release Parent
 
-Pom which can be inherited for camunda releases defining some common release properties.
+Pom which can be inherited for flowave releases defining some common release properties.
 It allows to deploy to two repositories simultaneously. One is a Nexus OSS server, the other one a Nexus Enterprise server.
 It will deploy the artifacts at the end of the build to keep the window of failure small when talking to external systems.
 
-Usage
------
+## Usage
 
-Inherit the camunda-release-parent pom inside your project like so  
+Inherit the flowave-release-parent pom inside your project like so  
   
     <parent>
       <groupId>org.camunda</groupId>
@@ -30,8 +28,7 @@ Specify the <scm> section for your project eg.
       <developerConnection>scm:git:git@github.com:camunda/MY_PROJECT_URL.git</developerConnection>
     </scm>
 
-Release
--------
+## Release
 
 Prerequisite:  
 
@@ -80,8 +77,7 @@ To release your own project use the following command:
     
 This will trigger the `sonatpye-oss-release` profile inside the `camunda-release-parent` pom automatically.
     
-Customization
--------------
+## Customization
 
 You can override some default behaviours through the usage of the command line properties below. Add those properties to the `-Darguments="INSERT_PROPERTIES_HERE"` part of the Maven release command.
 
@@ -109,8 +105,7 @@ You can override some default behaviours through the usage of the command line p
   </tr>
 </table>
 
-Testing
--------
+## Testing
 
 You can test your release steps by using the following Maven release command:
 
@@ -122,3 +117,13 @@ You can test your release steps by using the following Maven release command:
     -DpushChanges=false -DremoteTagging=false -DlocalCheckout=true
     
 This will do a release but will not push anything to the involved git repositories and will not deploy to Maven Central. Instead it will deploy to a local Nexus repository. (Hint: You can use a simple Nexus Docker image to do so.)
+
+## Contributing
+
+Have a look at the main Flowave [CONTRIBUTING.md](https://github.com/finos/flowave-bpm-platform/blob/main/CONTRIBUTING.md) file for our general contribution guidelines and governance policies.
+
+## License
+
+Copyright 2025 FINOS
+
+The source files in this repository are made available under the [Apache License Version 2.0](./LICENSE).
