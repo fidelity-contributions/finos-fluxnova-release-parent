@@ -25,12 +25,12 @@
     <skip.camunda.release>false</skip.camunda.release>
     <skip.central.release>false</skip.central.release>
     <nexus.snapshot.repository.id>github</nexus.snapshot.repository.id>
-    <nexus.snapshot.repository>https://maven.pkg.github.com/finos/flowave-bpm-platform</nexus.snapshot.repository>
+    <nexus.snapshot.repository>https://maven.pkg.github.com/finos/flowave-release-parent</nexus.snapshot.repository>
     <nexus.release.repository.id>github</nexus.release.repository.id>
-    <nexus.release.repository>https://maven.pkg.github.com/finos/flowave-bpm-platform</nexus.release.repository>
+    <nexus.release.repository>https://maven.pkg.github.com/finos/flowave-release-parent</nexus.release.repository>
 
     <nexus.staging.deploy.id>github</nexus.staging.deploy.id>
-    <nexus.staging.deploy.url>https://maven.pkg.github.com/finos/flowave-bpm-platform</nexus.staging.deploy.url>
+    <nexus.staging.deploy.url>https://maven.pkg.github.com/finos/flowave-release-parent</nexus.staging.deploy.url>
     <gpg.useagent>true</gpg.useagent>
 
     <plugin.version.clean>3.1.0</plugin.version.clean>
@@ -221,12 +221,12 @@
     <repository>
       <id>github</id>
       <name>GitHub Flowave Maven Packages</name>
-      <url>https://maven.pkg.github.com/finos/flowave-bpm-platform</url>
+      <url>https://maven.pkg.github.com/finos/flowave-release-parent</url>
     </repository>
     <snapshotRepository>
       <id>github</id>
       <name>GitHub Flowave Maven Packages</name>
-      <url>https://maven.pkg.github.com/finos/flowave-bpm-platform</url>
+      <url>https://maven.pkg.github.com/finos/flowave-release-parent</url>
     </snapshotRepository>
   </distributionManagement>
 
@@ -342,7 +342,7 @@
   <repositories>
     <repository>
       <id>github</id>
-      <url>https://maven.pkg.github.com/finos/flowave-bpm-platform</url>
+      <url>https://maven.pkg.github.com/finos/flowave-release-parent</url>
       <snapshots>
         <enabled>true</enabled>
       </snapshots>
