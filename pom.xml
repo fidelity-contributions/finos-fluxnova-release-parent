@@ -339,6 +339,24 @@
     </profile>
   </profiles>
 
+  <repositories>
+    <repository>
+      <id>github</id>
+      <url>https://maven.pkg.github.com/finos/flowave-bpm-platform</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>maven-central</id>
+      <name>Maven Central</name>
+      <url>https://repo1.maven.org/maven2</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
   <licenses>
     <license>
       <name>The Apache Software License, Version 2.0</name>
@@ -361,13 +379,6 @@
       <organizationUrl>http://camunda.org</organizationUrl>
     </developer>
   </developers>
-
-  <scm>
-    <url>https://github.com/camunda/camunda-release-parent</url>
-    <connection>scm:git:git@github.com:camunda/camunda-release-parent.git</connection>
-    <developerConnection>scm:git:git@github.com:camunda/camunda-release-parent.git</developerConnection>
-    <tag>HEAD</tag>
-  </scm>
 
   <issueManagement>
     <system>Jira</system>
