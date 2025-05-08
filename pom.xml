@@ -4,7 +4,7 @@
 
   <groupId>org.camunda</groupId>
   <artifactId>camunda-release-parent</artifactId>
-  <version>3.10.0-SNAPSHOT</version>
+  <version>3.7.2</version>
   <packaging>pom</packaging>
   <name>camunda - Release Parent Pom</name>
 
