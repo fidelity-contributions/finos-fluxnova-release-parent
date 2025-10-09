@@ -166,11 +166,13 @@
             <autoPublish>true</autoPublish>
           </configuration>
         </plugin>
+        <!-- commented as per instruction on https://community.finos.org/docs/development-infrastructure/continuous-integration/java/#artifact-publishing
+          for publishing artifacts on maven central
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
           <version>${plugin.version.deploy}</version>
-        </plugin>
+        </plugin>-->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-source-plugin</artifactId>
@@ -202,6 +204,8 @@
     </pluginManagement>
   </build>
 
+  <!-- commented as per instruction on https://community.finos.org/docs/development-infrastructure/continuous-integration/java/#artifact-publishing
+  for publishing artifacts on maven central
   <distributionManagement>
     <repository>
       <id>github</id>
@@ -213,7 +217,7 @@
       <name>GitHub fluxnova Maven Packages</name>
       <url>https://maven.pkg.github.com/finos/fluxnova-release-parent</url>
     </snapshotRepository>
-  </distributionManagement>
+  </distributionManagement> -->
 
   <repositories>
     <repository>
