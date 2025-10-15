@@ -163,7 +163,8 @@
           <extensions>true</extensions>
           <configuration>
             <publishingServerId>${publish.server.id}</publishingServerId>
-            <autoPublish>true</autoPublish>
+            <!-- TODO: set to true once everything is tested, set it to false as removed dryrun from release step -->
+            <autoPublish>false</autoPublish>
           </configuration>
         </plugin>
         <!-- commented as per instruction on https://community.finos.org/docs/development-infrastructure/continuous-integration/java/#artifact-publishing
