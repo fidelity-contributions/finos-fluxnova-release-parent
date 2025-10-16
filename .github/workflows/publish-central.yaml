@@ -15,6 +15,10 @@ on:
   pull_request:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
+
 jobs:
   publish-central:
     name: Publish to Maven Central
@@ -22,6 +26,13 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        #added with option due to runner checking out a detached HEAD state in prepare step
+        # need to check if its happening as workflow is triggered on push to branch or even with workflow dispatch
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}                    # or use default GITHUB_TOKEN
+          persist-credentials: true             # allow git push from the job
+          fetch-depth: 0                        # full history so branch refs exist
+          ref: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}          # checkout the branch (not a detached SHA)
 
       - name: Set up JDK
         uses: actions/setup-java@v4
