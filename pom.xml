@@ -4,7 +4,7 @@
 
   <groupId>org.finos.fluxnova</groupId>
   <artifactId>fluxnova-release-parent</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>fluxnova - Release Parent Pom</name>
 
@@ -148,9 +148,6 @@
           <artifactId>maven-release-plugin</artifactId>
           <version>${plugin.version.release}</version>
           <configuration>
-<!--            <mavenExecutorId>forked-path</mavenExecutorId>-->
-<!--            <useReleaseProfile>false</useReleaseProfile>-->
-<!--            <arguments>${arguments} -Psonatype-oss-release</arguments>-->
             <autoVersionSubmodules>true</autoVersionSubmodules>
             <releaseProfiles>release</releaseProfiles>
             <goals>${release.goals}</goals>
@@ -204,12 +201,6 @@
   </build>
 
   <distributionManagement>
-    <!--commenting this as we are using central-publishing-maven-plugin to publish to Maven Central -->
-    <!--repository>
-      <id>github</id>
-      <name>GitHub fluxnova Maven Packages</name>
-      <url>https://maven.pkg.github.com/finos/fluxnova-release-parent</url>
-    </repository-->
     <snapshotRepository>
       <id>github</id>
       <name>GitHub fluxnova Maven Packages</name>

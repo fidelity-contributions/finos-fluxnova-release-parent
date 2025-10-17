@@ -58,7 +58,7 @@ jobs:
 
       #TODO: Remove -DdryRun=true for actual deployment
       - name: Prepare release
-        run: mvn -B -X -e -DpreparationGoals=clean release:prepare -Prelease -DinteractiveMode=false
+        run: mvn -B -DpreparationGoals=clean release:prepare -Prelease -DinteractiveMode=false
 
       - name: Perform release
-        run: mvn -B -X -e release:perform -Prelease -DinteractiveMode=false
+        run: mvn -B release:perform -Prelease -DinteractiveMode=false
