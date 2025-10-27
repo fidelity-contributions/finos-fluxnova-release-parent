@@ -62,6 +62,10 @@ jobs:
 
           # Set as environment variable
           echo "RELEASE_VERSION=${releaseVersion}" >> $GITHUB_ENV
+          
+          # Set tag name
+          TAG="v${releaseVersion}"
+          echo "TAG=$TAG" >> $GITHUB_ENV
 
           # Extract numeric components for computing next development version
           n=${releaseVersion//[!0-9]/ }
@@ -79,9 +83,9 @@ jobs:
           mvn -B \
             -DpreparationGoals=clean \
             release:prepare \
-            -DreleaseVersion=${{ github.event.inputs.releaseVersion }} \
+            -DreleaseVersion=${{ env.RELEASE_VERSION }} \
             -DdevelopmentVersion=${{ env.DEVELOPMENT_VERSION }} \
-            -Dtag=${{ github.event.inputs.releaseVersion }} \
+            -Dtag=${{ env.TAG }} \
             -DautoVersionSubmodules=true \
             -DinteractiveMode=false \
             -P release   
