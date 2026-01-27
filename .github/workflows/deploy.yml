@@ -29,10 +29,10 @@ jobs:
       - name: Java setup
         uses: ./.github/actions/java-setup
 
-      - name: Build (mvn clean install)
+      - name: Build
         if: github.event_name == 'pull_request' || (github.event_name == 'workflow_dispatch' && github.ref != 'refs/heads/main')
         run: mvn -B -e clean install
 
-      - name: Deploy (mvn clean deploy)
+      - name: Deploy
         if: (github.event_name == 'push' && github.ref == 'refs/heads/main') || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main')
-        run: mvn -B -e clean deploy
+        run: mvn -B -e clean deploy -s ./settings.xml
